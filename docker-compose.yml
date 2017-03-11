@@ -1,0 +1,22 @@
+version: '2'
+services:
+  web:
+    build:
+        context: .
+    image: brianstaats/vue-vis
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    # Before you run this file for the first time, make sure
+    # you remove node_modules/ folders in your host machine
+    command: >
+      sh -c '
+      if test -d node_modules;
+      then
+        echo node_modules_exists ;
+      else
+        cp -a /tmp/node_modules /app;
+      fi &&
+      npm install && npm run dev
+      '
