@@ -1,8 +1,8 @@
 {
   "name": "vue-vis",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Brian Staats",
+  "description": "Declarative charts and visualizations for Vue.js",
+  "author": "Brian Staats <brian.staats@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
