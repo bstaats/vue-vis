@@ -1,7 +1,7 @@
 <!-- Replicating the Bar chart from Bostock's https://bl.ocks.org/mbostock/3885304 -->
 
 <template>
-  <SvgContainer :width="960" :height="500">
+  <SvgContainer :width="960" :height="500" :responsive="true">
     <BarChart :width="960" :height="500"
               :margin="{top: 20, right: 20, bottom: 30, left: 40}"
               :data="data">

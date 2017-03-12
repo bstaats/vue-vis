@@ -8,7 +8,7 @@
 const props = {
   responsive: {
     type: Boolean,
-    default: true
+    default: false
   },
   width: {
     type: Number,
@@ -46,6 +46,10 @@ export default {
   methods: {
     onResize() {
       this.innerWidth = this.$el.parentElement.offsetWidth;
+
+      for (const c of this.$children) {
+        c.resize(this.innerWidth);
+      }
     }
   }
 }
